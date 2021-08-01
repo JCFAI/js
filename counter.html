@@ -6,27 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter</title>
     <script>
-      /*function counter() {
-        const header = document.querySelector("h1");
-        if (document.querySelector("h1").innerHTML === "Hello!") {
-          document.querySelector("h1").innerHTML = "Goodbye!";
-        } else {
-          document.querySelector("h1").innerHTML = "Hello!";
-        }
-      }
-*/
-      function counter() {
+      let counter = 0;
+      function count() {
+        counter++;
         const heading = document.querySelector("h1");
-        if (heading.innerHTML === "Hello!") {
-          heading.innerHTML = "Goodbye";
-        } else {
-          heading.innerHTML = "Hello!";
-        }
+        heading.innerHTML = counter;
       }
+      document.addEventListener("DOMContentLoaded", function () {
+        //document.querySelector("button").onclick = count;
+        document.querySelector("button").addEventListener("click", count);
+      });
     </script>
   </head>
   <body>
-    <h1>Hello!</h1>
-    <button onclick="counter()">COUNT</button>
+    <h1>0</h1>
+    <button>COUNT</button>
   </body>
 </html>
